@@ -1,0 +1,28 @@
+.ar-section {
+  background-color: $white;
+  width: 90%;
+  margin: auto;
+  border-radius: $primaryBorderRadius;
+
+  &__container {
+    @include d-flex(space-between);
+    max-width: $maxWidth;
+    margin: auto;
+    &__text-content {
+      max-width: 540px;
+      .heading {
+        @include font(3.5rem, 1.0714285714, bold, $black, null);
+        padding-top: 20px;
+      }
+      .para {
+        margin-top: 0.8em;
+        max-width: 270px;
+
+        @include font(1.1875rem, 1.4211026316, 400, $black, 0.012em);
+      }
+    }
+    &__image-wrapper {
+      padding-top: 106px;
+    }
+  }
+}

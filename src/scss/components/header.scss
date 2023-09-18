@@ -1,0 +1,123 @@
+.header {
+  background-color: $black;
+  &__top-container {
+    height: 44px;
+    width: 100%;
+    max-width: $maxWidth;
+    margin: auto;
+    position: relative;
+    z-index: 9999;
+    &__navigation {
+      .list {
+        li {
+          a {
+            opacity: 0.8;
+            color: $white;
+            &:hover {
+              transition: 0.1s linear;
+              opacity: 1;
+            }
+          }
+        }
+        @include d-flex( space-between);
+        font-size: $smallFont;
+      }
+    }
+  }
+
+  &__bottom-container-wrapper {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 997;
+    background-color: $black;
+
+    &__container {
+      width: 70%;
+      max-width: $maxWidth;
+      margin: auto;
+      height: 52px;
+      background-color: $black;
+      @include d-flex(space-between);
+      .navigation {
+        &__list {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          color: $white;
+          li {
+            a {
+              color: inherit;
+              font-size: $smallFont;
+            }
+          }
+          &__label {
+            font-size: $smallFont;
+            opacity: 0.8;
+            color: inherit;
+          }
+          li {
+            a {
+              &:hover {
+                transition: 0.1s linear;
+                color: $hoverAnchorBlue;
+              }
+            }
+          }
+        }
+      }
+      .anchor-buy-btn {
+        font-size: $smallFont;
+        padding: 3px 10px;
+        background-color: $blue;
+        border-radius: 20px;
+      }
+    }
+  }
+  &__ad-ribbon {
+    padding: 16px 0;
+    text-align: center;
+    background-color: $grey;
+    font-size: 0.9rem;
+    animation: headerRibbonAnimation 2s;
+
+    animation-iteration-count: 1;
+    @keyframes headerRibbonAnimation {
+      from {
+        transform: translateY(-100%);
+        background-color: $anchorBlue;
+      }
+
+      to {
+        background-color: $grey;
+        transform: translateY(0);
+      }
+    }
+    &__shop-now-anchor {
+      color: $anchorBlue;
+      &:hover {
+        text-decoration: underline;
+      }
+      &::after {
+        content: "→";
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $white;
+}
+h2 {
+  color: $white;
+}

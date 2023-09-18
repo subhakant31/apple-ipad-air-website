@@ -1,0 +1,29 @@
+.footer {
+  &__nav {
+    max-width: $maxWidth;
+    margin: auto;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+
+      .col-elements-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      .col-elements {
+        @include d-flex(null, column);
+        h3 {
+          @include font(0.75rem, 1.33337, 600, $footerTitleColor, -0.01em);
+          text-transform: capitalize;
+        }
+        ul {
+          li {
+            a {
+              @include font(0.75rem, 1.33337, 600, $footerLinkColor, -0.01em);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.hero-section {
+  height: 100vh;
+  background-color: $black;
+  display: grid;
+  place-content: center;
+
+  &__video-container {
+    height: 200vh;
+    margin: auto;
+    position: relative;
+    display: grid;
+    place-content: center;
+
+    &__video {
+      width: 900px;
+    }
+
+    &__hero-ipad-image {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  display: inline;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  animation: fade-in 2s cubic-bezier(0.51, 0, 1, 0.07);
+}
+
+.black-background {
+  color: black !important;
+  background-color: white !important;
+}

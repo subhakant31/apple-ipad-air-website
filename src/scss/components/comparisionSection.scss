@@ -1,0 +1,69 @@
+.comparision-section {
+  width: 90%;
+  margin: auto;
+  background-color: $white;
+  &__container {
+    max-width: $maxWidth;
+    margin: auto;
+    h2 {
+      @include font(56px, 1.0714285714, 600, $black, -0.005em);
+      text-align: center;
+      text-transform: capitalize;
+    }
+    &__anchors {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 38px;
+      a {
+        @include font(1.3125rem, 1.381002381, 400, $anchorBlue, null);
+        text-transform: capitalize;
+      }
+    }
+  }
+  &__wrapper {
+    &__col-elements {
+      max-width: 167px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .new-tag {
+        @include font(0.75rem, 2.0833733333, 400, #bf4800, -0.011em);
+        text-transform: capitalize;
+      }
+      .item-title {
+        @include font(1.5rem, 1.1666666667, 600, null, 0.009em);
+      }
+      .item-summary {
+        @include font(0.875rem, 1.4285914286, 400, null, -0.016em);
+        margin: 5px 6px 0;
+      }
+      .starting-price {
+        @include font(0.75rem, 1.3333733333, 400, null, -0.01em);
+      }
+      .anchor-buy-btn {
+        width: fit-content;
+        margin: auto;
+        font-size: 0.8rem;
+        padding: 3px 10px;
+        background-color: #0071e3;
+        color: $white;
+        border-radius: 20px;
+      }
+      .learn-more {
+        text-transform: capitalize;
+
+        @include font(0.875rem, 1.4285914286, 400, $anchorBlue, null);
+      }
+      .available-sizes {
+        @include font(1.3125rem, 1.1904761905, 600, nnull, 0.011em);
+      }
+      .display-type {
+        font-size: 0.75rem;
+        line-height: 1.3333733333;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+      }
+    }
+  }
+}

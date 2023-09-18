@@ -1,0 +1,25 @@
+@mixin px-to-rem($property, $value) {
+  #{$property}: calc($value / 16) + rem;
+}
+
+@mixin d-flex($justifyCont, $flexDir: null) {
+  display: flex;
+  flex-direction: $flexDir;
+  justify-content: $justifyCont;
+  align-items: center;
+}
+
+@mixin text-gradient($bg, $bg-clip, $fill-color) {
+  background: $bg;
+  -webkit-background-clip: $bg-clip;
+  background-clip: $bg-clip;
+  -webkit-text-fill-color: $fill-color;
+}
+
+@mixin font($size, $height, $weight, $color, $spacing) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+  letter-spacing: $spacing;
+}

@@ -1,0 +1,23 @@
+.foot-notes-section {
+  &__container {
+    max-width: $maxWidth;
+    margin: auto;
+    padding: 17px 0 11px 0;
+    border-top: 1px solid $footerBorderColor;
+    border-bottom: 1px solid $footerBorderColor;
+    ul {
+      li {
+        padding-bottom: 0.8em;
+        @include font(0.75rem,1.33337,400,null,-0.01em);
+      }
+    }
+    ol {
+      list-style-position: inside;
+      li {
+        list-style-type: decimal;
+        @include font(0.75rem,1.33337,400,null,-0.01em);
+        padding-bottom: 0.8em;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "./partials/mixins";
+@import "./partials/variables";
+@import "./partials/reset";
+@import "./components/header";
+@import "./components/main";
+@import "./components/heroSection";
+@import "./fonts";
+@import "./components/featuresSection";
+@import "./components/exploreMoreSection.scss";
+@import "./components/arSection";
+@import "./components/exploreMoreSection";
+@import "./components/footNotesSection";
+@import "./components/aboutSection";
+@import "./components/aboutCpuSection";
+@import "./components/comparisionSection";
+@import "./components/footer.scss";
+
+body {
+  font-family: "sf pro light" !important;
+  background: #f1f1f1;
+}

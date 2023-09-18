@@ -1,0 +1,88 @@
+.about-section {
+  max-width: $maxWidth;
+  margin: auto;
+  background-color: $white;
+  margin-top: 100vh;
+  position: relative;
+
+  &__container {
+    position: relative;
+
+    &__heading {
+      @include font(6rem, 1.0416, bold, $black, null);
+      margin-bottom: 70px;
+
+      small {
+        @include text-gradient($textGradientDefault, text, transparent);
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+      }
+    }
+
+    &__para {
+      position: relative;
+      margin-left: 50%;
+      right: 0;
+      max-width: $aboutParaMaxWidth;
+      @include font(1.75rem, 1.2858342857, bold, $black, 0.007em);
+      margin-top: 20px;
+      small {
+        @include text-gradient(
+          linear-gradient(90deg, #f56772 0%, #ba6bff 100%),
+          text,
+          transparent
+        );
+      }
+    }
+  }
+}
+.images-container {
+  position: absolute;
+  right: 0;
+  margin-top: 20vh;
+
+  .image-container {
+    width: $ipadImageMaxWidth;
+    right: 0;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url("../assets/images/mask.svg");
+    position: absolute;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.ipad-colors {
+  .image-container:nth-child(1) {
+    -webkit-mask-image: url("../assets/images/color-mask.svg");
+  }
+  .image-container:nth-child(2) {
+    -webkit-mask-image: url("../assets/images/color-mask-2.svg");
+  }
+  .image-container:nth-child(3) {
+    -webkit-mask-image: url("../assets/images/color-mask-3.svg");
+  }
+  .image-container:nth-child(4) {
+    -webkit-mask-image: url("../assets/images/color-mask-4.svg");
+  }
+  .image-container:nth-child(5) {
+    -webkit-mask-image: url("../assets/images/color-mask-5.svg");
+  }
+}
+.paragraph {
+  margin-left: 50%;
+  max-width: $aboutParaMaxWidth;
+  @include font(1.75rem, 1.2858342857, bold, $black, 0.007em);
+  margin-top: 70vh;
+  small {
+    @include text-gradient(
+      linear-gradient(90deg, #f56772 0%, #ba6bff 100%),
+      text,
+      transparent
+    );
+  }
+}
